@@ -18,7 +18,7 @@ class Player {
         this.name = playerData.name;
         this.position = playerData.position;
         this.shortPos = playerData.shortPos;
-        this.teamId = playerData.teamId;
+        this.teamId = Team.teamIDByNickname(playerData.playsFor);
         this.constructor.all.push(this);
     }
     get playsFor() {

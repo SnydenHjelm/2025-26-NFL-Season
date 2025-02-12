@@ -1,15 +1,15 @@
 const players = [
-    {name: "Jordan Love", position: "Quarterback", shortPos: "QB", teamId: 12},
-    {name: "Xaver McKinney", position: "Safety", shortPos: "S", teamId: 12},
-    {name: "A.J. Brown", position: "Wide Receiver", shortPos: "WR", teamId: 26},
-    {name: "Nik Bonitto", position: "Linebacker", shortPos: "LB", teamId: 10},
-    {name: "Bijan Robinson", position: "Running Back", shortPos: "RB", teamId: 2},
-    {name: "Buda Baker", position: "Safety", shortPos: "S", teamId: 1},
-    {name: "L'Jarius Sneed", position: "Cornerback", shortPos: "CB", teamId: 31},
-    {name: "Cameron Heyward", position: "Defensive Tackle", shortPos: "DT", teamId: 27},
-    {name: "Brian Thomas Jr.", position: "Wide Receiver", shortPos: "WR", teamId: 15},
-    {name: "Tyler Higbee", position: "Tight End", shortPos: "TE", teamId: 19},
-]
+    {name: "Jordan Love", position: "Quarterback", shortPos: "QB", playsFor: "Packers"},
+    {name: "Xaver McKinney", position: "Safety", shortPos: "S", playsFor: "Packers"},
+    {name: "A.J. Brown", position: "Wide Receiver", shortPos: "WR", playsFor: "Eagles"},
+    {name: "Nik Bonitto", position: "Linebacker", shortPos: "LB", playsFor: "Broncos"},
+    {name: "Bijan Robinson", position: "Running Back", shortPos: "RB", playsFor: "Falcons"},
+    {name: "Buda Baker", position: "Safety", shortPos: "S", playsFor: "Cardinals"},
+    {name: "L'Jarius Sneed", position: "Cornerback", shortPos: "CB", playsFor: "Titans"},
+    {name: "Cameron Heyward", position: "Defensive Tackle", shortPos: "DT", playsFor: "Steelers"},
+    {name: "Brian Thomas Jr.", position: "Wide Receiver", shortPos: "WR", playsFor: "Jaguars"},
+    {name: "Tyler Higbee", position: "Tight End", shortPos: "TE", playsFor: "Rams"},
+];
 
 const teams = [
     { city: "Arizona", nickname: "Cardinals", conferance: "NFC", division: "West" },
