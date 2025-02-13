@@ -57,6 +57,8 @@ class Team {
         this.ties = 0;
         this.losses = 0;
         this.tiebreaker = 0;
+        this.mainC = teamData.mainC;
+        this.secondaryC = teamData.secondaryC;
         this.constructor.all.push(this);
     }
     get getWins() {return this.wins};
