@@ -3,3 +3,38 @@
     --nfl-blue: #013369;
     --nfl-red: #D50A0A;
 }
+
+body {
+    margin: 0;
+    background-color: var(--nfl-blue);
+}
+
+main {
+    max-width: 800px;
+    margin: auto;
+}
+
+nav {
+    display: flex;
+    background-color: var(--nfl-red);
+    gap: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    flex-grow: 1;
+    flex-basis: 0;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    font-family: head;
+}
+
+nav > a:hover {
+    background-color: var(--nfl-blue);
+    border-radius: 10px;
+}
