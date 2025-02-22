@@ -9,6 +9,14 @@ body {
     background-color: var(--nfl-blue);
 }
 
+#current {
+    background-color: var(--nfl-blue);
+    border-radius: 10px;
+    color: white;
+    transform: scale(1.05);
+    border: 2px solid #01162c;
+}
+
 main {
     max-width: 800px;
     margin: auto;
@@ -17,24 +25,38 @@ main {
 nav {
     display: flex;
     background-color: var(--nfl-red);
-    gap: 10px;
+    gap: 20px;
     padding: 20px;
     border-radius: 10px;
-    margin-top: 5px;
+    margin-top: 15px;
+    border: 2px solid #6e0101;
 }
 
 nav a {
     text-decoration: none;
-    color: black;
+    color: white;
     flex-grow: 1;
     flex-basis: 0;
     text-align: center;
-    padding: 10px;
-    font-size: 18px;
+    padding: 5px;
+    font-size: 24px;
     font-family: head;
+    border: 2px solid var(--nfl-red);
 }
 
 nav > a:hover {
     background-color: var(--nfl-blue);
     border-radius: 10px;
+    color: white;
+    transform: scale(1.05);
+    border: 2px solid #01162c;
+}
+
+#nfl-logo {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#nfl-logo img {
+    height: 200px;
 }
