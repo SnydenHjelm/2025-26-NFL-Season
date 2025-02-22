@@ -2,6 +2,8 @@
     box-sizing: border-box;
     --nfl-blue: #013369;
     --nfl-red: #D50A0A;
+    --nav-border: #6e0101;
+    --nav-a-border: #01162c;
 }
 
 body {
@@ -29,7 +31,7 @@ nav {
     padding: 20px;
     border-radius: 10px;
     margin-top: 15px;
-    border: 2px solid #6e0101;
+    border: 2px solid var(--nav-border);
 }
 
 nav a {
@@ -49,7 +51,7 @@ nav > a:hover {
     border-radius: 10px;
     color: white;
     transform: scale(1.05);
-    border: 2px solid #01162c;
+    border: 2px solid var(--nav-a-border);
 }
 
 #nfl-logo {
