@@ -19,6 +19,12 @@ body {
     border: 2px solid #01162c;
 }
 
+#index-header {
+    text-align: center;
+    color: white;
+    font-family: head;
+}
+
 main {
     max-width: 800px;
     margin: auto;
@@ -61,4 +67,23 @@ nav > a:hover {
 
 #nfl-logo img {
     height: 200px;
+}
+
+#playoff-weeks {
+    display: flex;
+    text-align: center;
+}
+
+#playoff-weeks a {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+#reg-weeks {
+    display: flex;
+}
+
+#reg-weeks a {
+    flex-grow: 1;
+    flex-basis: 0;
 }
