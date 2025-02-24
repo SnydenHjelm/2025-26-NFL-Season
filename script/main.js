@@ -1,3 +1,82 @@
+class Draftee {
+    static all = [];
+    static byCollege(college) {
+        return Draftee.all.filter((x) => x.college === college);
+    }
+    static byRound(round) {
+        return Draftee.all.filter((x) => x.round === round);
+    }
+    static displayDraftees() {
+        let blueOrRed = 1;
+
+        for (let draftee of Draftee.all) {
+            if (draftee.pick === 1) {
+                if (blueOrRed) {
+                    draftBoard.innerHTML += `
+                    <div id="round-${draftee.round}" class="drafted-player">
+                        <p>Round: ${draftee.round}</p> 
+                        <p>Pick: ${draftee.pick}</p>
+                        <img class="team" src="../images/${draftee.team.toLowerCase()}.png">
+                        <p>${draftee.position}</p>
+                        <p>${draftee.name}</p>
+                        <p>${draftee.college}</p>
+                    </div>
+                    `;
+                    blueOrRed = 0;
+                } else {
+                    draftBoard.innerHTML += `
+                    <div id="round-${draftee.round}" class="drafted-player blue">
+                        <p>Round: ${draftee.round}</p> 
+                        <p>Pick: ${draftee.pick}</p>
+                        <img class="team" src="../images/${draftee.team.toLowerCase()}.png">
+                        <p>${draftee.position}</p>
+                        <p>${draftee.name}</p>
+                        <p>${draftee.college}</p>
+                    </div>
+                    `;
+                    blueOrRed = 1;
+                }
+            } else {
+                if (blueOrRed) {
+                    draftBoard.innerHTML += `
+                    <div class="drafted-player">
+                        <p>Round: ${draftee.round}</p> 
+                        <p>Pick: ${draftee.pick}</p>
+                        <img class="team" src="../images/${draftee.team.toLowerCase()}.png">
+                        <p>${draftee.position}</p>
+                        <p>${draftee.name}</p>
+                        <p>${draftee.college}</p>
+                    </div>
+                    `;
+                    blueOrRed = 0;
+                } else {
+                    draftBoard.innerHTML += `
+                    <div class="drafted-player blue">
+                        <p>Round: ${draftee.round}</p> 
+                        <p>Pick: ${draftee.pick}</p>
+                        <img class="team" src="../images/${draftee.team.toLowerCase()}.png">
+                        <p>${draftee.position}</p>
+                        <p>${draftee.name}</p>
+                        <p>${draftee.college}</p>
+                    </div>
+                    `;
+                    blueOrRed = 1;
+                }
+            }
+            
+        }
+    }
+    constructor(drafteeData) {
+        this.round = drafteeData.round;
+        this.pick = drafteeData.pick;
+        this.team = drafteeData.team;
+        this.position = drafteeData.position;
+        this.name = drafteeData.name;
+        this.college = drafteeData.college;
+        this.constructor.all.push(this);
+    }
+}
+
 class Player {
     static all = [];
     static byId(id) {
@@ -78,6 +157,8 @@ class Team {
     }
 }
 
+const draftBoard = document.querySelector("#draft-board");
+
 for (let team of teams) {
     new Team(team);
 }
@@ -85,3 +166,9 @@ for (let team of teams) {
 for (let player of players) {
     new Player(player);
 }
+
+for (let draftee of draftees) {
+    new Draftee(draftee);
+}
+
+Draftee.displayDraftees();

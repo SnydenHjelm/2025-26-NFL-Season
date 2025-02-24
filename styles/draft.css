@@ -1,0 +1,54 @@
+#draft-board {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.drafted-player {
+    display: grid;
+    grid-template-columns: 120px 120px 50px 50px 2fr 180px;
+    border: 2px solid var(--nav-border);
+    border-radius: 5px;
+    align-items: center;
+    font-family: bread;
+    background-color: var(--nfl-red);
+    color: white;
+    font-size: 20px;
+}
+
+.blue {
+    border-color: #0460c2;
+    background-color: #032a53;
+}
+
+.drafted-player p {
+    margin: 15px;
+}
+
+.drafted-player img, .drafted-player p {
+    justify-self: center;
+}
+
+#round-nav {
+    display: flex;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid white;
+}
+
+#round-nav a {
+    flex-grow: 1;
+    flex-basis: 0;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: head;
+}
+
+#round-nav a:hover {
+    text-decoration: underline;
+}
+
+.team {
+    width: 50px;
+}
