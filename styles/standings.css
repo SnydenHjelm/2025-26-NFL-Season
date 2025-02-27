@@ -16,7 +16,7 @@
 #division-tables {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: 20px;
+    margin-top: 10px;
     gap: 10px;
     color: white;
     font-family: bread;
