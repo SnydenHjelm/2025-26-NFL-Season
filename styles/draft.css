@@ -7,11 +7,11 @@
 .drafted-player {
     display: grid;
     grid-template-columns: 120px 120px 50px 50px 2fr 180px;
-    border: 2px solid var(--nav-border);
+    border: 2px solid var(--red-border);
     border-radius: 5px;
     align-items: center;
     font-family: bread;
-    background-color: var(--nfl-red);
+    background-color: var(--afc-red);
     color: white;
     font-size: 20px;
 }

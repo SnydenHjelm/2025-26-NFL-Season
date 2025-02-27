@@ -1,9 +1,15 @@
 :root {
-    box-sizing: border-box;
     --nfl-blue: #013369;
     --nfl-red: #D50A0A;
-    --nav-border: #6e0101;
-    --nav-a-border: #01162c;
+    --red-border: #6e0101;
+    --blue-border: #01162c;
+    --afc-red: #cf0821;
+    --nfc-blue: #003866;
+    --darker-red-border: #3b0202;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
@@ -17,6 +23,38 @@ body {
     color: white;
     transform: scale(1.05);
     border: 2px solid #01162c;
+}
+
+footer {
+    margin-top: 20px;
+    border-top: 4px solid white;
+    display: grid;
+    grid-template-columns: 100px 400px 1fr;
+    align-items: center;
+}
+
+footer img {
+    width: 50px;
+    justify-self: right;
+}
+
+#footer-info {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+#footer-info a {
+    flex-grow: 1;
+    flex-basis: 0;
+    color: white;
+    font-family: bread;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+#footer-info a:hover {
+    text-decoration: underline;
 }
 
 h2 {
@@ -44,7 +82,7 @@ nav {
     padding: 20px;
     border-radius: 10px;
     margin-top: 15px;
-    border: 2px solid var(--nav-border);
+    border: 2px solid var(--red-border);
     margin-bottom: 10px;
 }
 
@@ -65,7 +103,7 @@ nav > a:hover {
     border-radius: 10px;
     color: white;
     transform: scale(1.05);
-    border: 2px solid var(--nav-a-border);
+    border: 2px solid var(--blue-border);
 }
 
 #nfl-logo {
@@ -103,7 +141,7 @@ nav > a:hover {
     gap: 10px;
     background-color: var(--nfl-red);
     padding: 10px;
-    border: 2px solid var(--nav-border);
+    border: 2px solid var(--red-border);
     border-radius: 10px;
     font-family: head;
 }
@@ -120,5 +158,5 @@ nav > a:hover {
     border-radius: 10px;
     color: white;
     transform: scale(1.05);
-    border: 2px solid var(--nav-a-border);
+    border: 2px solid var(--blue-border);
 }

@@ -3,21 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2025-26 NFL Season</title>
-    <link rel="stylesheet" href="styles/fonts.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="icon" href="images/nfl-icon.webp">
+    <title>2025-26 Divisional Standings</title>
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/standings.css">
+    <link rel="icon" href="../images/nfl-icon.webp">
 </head>
 <body>
     <main>
-        <div id="nfl-logo">
-            <img src="images/nfl.png">
-        </div>
-        <h1 id="index-header">The 2025-26 NFL Season</h1>
         <nav>
-            <a id="current" href="#">Home</a>
-            <a href="pages/draft.html">Draft</a>
-            <a href="pages/standings.html">Standings</a>
+            <a href="../index.html">Home</a>
+            <a href="draft.html">Draft</a>
+            <a id="current" href="standings.html">Standings</a>
             <a href="#">Statistics</a>
         </nav>
         <div id="week-nav">
@@ -50,8 +47,20 @@
                 <a href="#">Super Bowl</a>
             </div>
         </div>
+
+        <div id="division-tables"></div>
     </main>
-    <script src="script/db.js"></script>
-    <script src="script/main.js"></script>
+    <footer>
+        <img src="../images/nfl.png">
+        <h2>2025-26 NFL Season</h2>
+        <div id="footer-info">
+            <a href="../index.html">Home</a>
+            <a href="draft.html">Draft</a>
+            <a href="standings.html">Standings</a>
+            <a href="statistics.html">Statistics</a>
+        </div>
+    </footer>
+    <script src="../script/db.js"></script>
+    <script src="../script/main.js"></script>
+    <script src="../script/standings.js"></script>
 </body>
-</html>

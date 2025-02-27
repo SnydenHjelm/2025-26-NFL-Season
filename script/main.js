@@ -112,6 +112,45 @@ class Player {
 
 class Team {
     static all = [];
+    static byConferance(conf) {
+        return Team.all.filter((x) => x.conferance === conf.toUpperCase());
+    }
+    static byDivision(conf, div) {
+        return Team.all.filter((x) => x.conferance === conf.toUpperCase() && x.division.toLowerCase() === div.toLowerCase());
+    }
+    static displayDivision(conf, div) {
+        let teams = Team.byDivision(conf, div);
+        teams = teams.sort((a, b) => b.tiebreaker - a.tiebreaker);
+        teams = teams.sort((a, b) => b.wins - a.wins);
+        let container = document.createElement("div");
+        container.classList.add(conf.toLowerCase());
+        container.id = `${conf.toLowerCase()}-${div.toLowerCase()}`;
+        container.innerHTML = `<h2 class="div-name">${conf} ${div}</h2>`;
+        document.querySelector("#division-tables").appendChild(container);
+        
+        for (let i=0; i<teams.length; i++) {
+            if (i === teams.length - 1) {
+                container.innerHTML += `
+                <div class="team last-team">
+                    <img src="../images/${teams[i].nickname.toLowerCase()}.png">
+                    <p class="team-name">${teams[i].city} ${teams[i].nickname}</p>
+                    <p class="record">${teams[i].wins}-${teams[i].losses}</p>
+                </div>
+                `;
+            } else {
+                container.innerHTML += `
+                <div class="team">
+                    <img src="../images/${teams[i].nickname.toLowerCase()}.png">
+                    <p class="team-name">${teams[i].city} ${teams[i].nickname}</p>
+                    <p class="record">${teams[i].wins}-${teams[i].losses}</p>
+                </div>
+                `;
+            }
+        }
+    }
+    static teamByNickname(nickname) {
+        return Team.all.find((x) => x.nickname === nickname);
+    }
     static teamIDByNickname(nickname) {
         let team = Team.all.find((x) => x.nickname.toLowerCase() === nickname.toLowerCase());
         return team.id;
@@ -120,22 +159,16 @@ class Team {
         let team = Team.all.find((x) => x.id === id);
         return `${team.city} ${team.nickname}`;
     }
-    static byConferance(conf) {
-        return Team.all.filter((x) => x.conferance === conf.toUpperCase());
-    }
-    static byDivision(conf, div) {
-        return Team.all.filter((x) => x.conferance === conf.toUpperCase() && x.division.toLowerCase() === div.toLowerCase());
-    }
     constructor(teamData) {
         this.id = Team.all.length + 1;
         this.city = teamData.city;
         this.nickname = teamData.nickname;
         this.conferance = teamData.conferance;
         this.division = teamData.division;
-        this.wins = 0;
-        this.ties = 0;
-        this.losses = 0;
-        this.tiebreaker = 0;
+        this.wins = teamData.wins;
+        this.ties = teamData.ties;
+        this.losses = teamData.losses;
+        this.tiebreaker = teamData.tiebreaker;
         this.mainC = teamData.mainC;
         this.secondaryC = teamData.secondaryC;
         this.constructor.all.push(this);
@@ -144,17 +177,17 @@ class Team {
     get getTies() {return this.ties};
     get getLosses() {return this.losses};
 
-    changeWDL(what) {
-        if (what.toLowerCase() === "w") {
-            this.wins++
-        } else if (what.toLowerCase() === "d") {
-            this.ties++
-        } else if (what.toLowerCase() === "l") {
-            this.losses++
-        } else {
-            return false;
-        }
-    }
+    // changeWDL(what) {
+    //     if (what.toLowerCase() === "w") {
+    //         this.wins++
+    //     } else if (what.toLowerCase() === "d") {
+    //         this.ties++
+    //     } else if (what.toLowerCase() === "l") {
+    //         this.losses++
+    //     } else {
+    //         return false;
+    //     }
+    // }
 }
 
 const draftBoard = document.querySelector("#draft-board");
@@ -170,5 +203,3 @@ for (let player of players) {
 for (let draftee of draftees) {
     new Draftee(draftee);
 }
-
-Draftee.displayDraftees();

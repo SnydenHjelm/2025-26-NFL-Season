@@ -1,0 +1,59 @@
+.afc {
+    background-color: var(--afc-red);
+    border: 2px solid white;
+}
+
+.nfc {
+    background-color: var(--nfc-blue);
+    border: 2px solid white;
+}
+
+.div-name {
+    margin-bottom: 0;
+    border-bottom: 4px solid white;
+}
+
+#division-tables {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 20px;
+    gap: 10px;
+    color: white;
+    font-family: bread;
+    font-size: 18px;
+}
+
+#division-tables > div {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
+.last-team {
+    border-bottom-style: none !important; 
+}
+
+.record {
+    font-size: 24px;
+    margin: 0;
+}
+
+.team {
+    display: grid;
+    grid-template-columns: 100px 1fr 50px;
+    align-items: center;
+    border-bottom: 2px solid white;
+}
+
+.team img {
+    width: 50px;
+}
+
+.team img, .team p {
+    justify-self: center;
+}
+
+.team-name {
+    justify-self: start !important;
+}
