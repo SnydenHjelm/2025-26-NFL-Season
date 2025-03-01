@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2025 NFL Draft</title>
+    <title>2025-26 Divisional Standings</title>
     <link rel="stylesheet" href="../styles/fonts.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <link rel="stylesheet" href="../styles/draft.css">
+    <link rel="stylesheet" href="../styles/statistics.css">
     <link rel="icon" href="../images/nfl-icon.webp">
 </head>
 <body>
     <main>
         <nav>
             <a href="../index.html">Home</a>
-            <a id="current" href="draft.html">Draft</a>
+            <a href="draft.html">Draft</a>
             <a href="standings.html">Standings</a>
-            <a href="statistics.html">Statistics</a>
+            <a id="current" href="statistics.html">Statistics</a>
         </nav>
         <div id="week-nav">
             <div class="reg-weeks" id="reg-weeks-top">
@@ -47,18 +47,20 @@
                 <a href="#">Super Bowl</a>
             </div>
         </div>
-        <h2>2025 NFL Draft</h2>
-        
-        <div id="round-nav">
-            <a href="#round-1">Round 1</a>
-            <a href="#round-2">Round 2</a>
-            <a href="#round-3">Round 3</a>
-            <a href="#round-4">Round 4</a>
-            <a href="#round-5">Round 5</a>
-            <a href="#round-6">Round 6</a>
-            <a href="#round-7">Round 7</a>
-        </div>
-        <div id="draft-board">
+        <h2>Statistics Leaders</h2>
+        <div id="stat-tables">
+            <div class="stat" id="pass-yds"></div>
+            <div class="stat" id="pass-tds"></div>
+            <div class="stat" id="pass-int"></div>
+            <div class="stat" id="rush-yds"></div>
+            <div class="stat" id="rush-tds"></div>
+            <div class="stat" id="rec-yds"></div>
+            <div class="stat" id="rec-tds"></div>
+            <div class="stat" id="tfl"></div>
+            <div class="stat" id="sacks"></div>
+            <div class="stat" id="int"></div>
+            <div class="stat" id="ff"></div>
+            <div class="stat" id="fr"></div>
         </div>
     </main>
     <footer>
@@ -73,6 +75,6 @@
     </footer>
     <script src="../script/db.js"></script>
     <script src="../script/main.js"></script>
-    <script src="../script/draft.js"></script>
+    <script src="../script/statistics.js"></script>
 </body>
 </html>

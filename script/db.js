@@ -112,3 +112,113 @@ const teams = [
     { city: "Tennessee", nickname: "Titans", conferance: "AFC", division: "South", wins: 0, ties: 0, losses: 0, tiebreaker: 0, mainC: "#0C2340", secondaryC: "#4B92DB" },
     { city: "Washington", nickname: "Commanders", conferance: "NFC", division: "East", wins: 0, ties: 0, losses: 0, tiebreaker: 0, mainC: "#5A1414", secondaryC: "#FFB612" }
 ];
+
+const stats = [
+    [
+        {stat: "pass-yds"},
+        {team: "Bengals", position: "QB", name: "Joe Burrow", statCount: 4918},
+        {team: "Vikings", position: "QB", name: "Sam Darnold", statCount: 4319},
+        {team: "Seahawks", position: "QB", name: "Geno Smith", statCount: 4320},
+        {team: "Lions", position: "QB", name: "Jared Goff", statCount: 4629},
+        {team: "Buccaneers", position: "QB", name: "Baker Mayfield", statCount: 4500}
+    ],
+    
+    [
+        {stat: "pass-tds"},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0}
+    ],
+
+    [
+        {stat: "pass-int"},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0}
+    ],
+
+    [
+        {stat: "rush-yds"},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0}
+    ],
+
+    [
+        {stat: "rush-tds"},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0}
+    ],
+
+    [
+        {stat: "rec-yds"},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0}
+    ],
+
+    [
+        {stat: "rec-tds"},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0}
+    ],
+
+    [
+        {stat: "tfl"},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0}
+    ],
+
+    [
+        {stat: "sacks"},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0}
+    ],
+
+    [
+        {stat: "int"},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0}
+    ],
+
+    [
+        {stat: "ff"},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0}
+    ],
+
+    [
+        {stat: "fr"},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0},
+        {team: "qm", position: "?", name: "Unknown", statCount: 0}
+    ],
+];
