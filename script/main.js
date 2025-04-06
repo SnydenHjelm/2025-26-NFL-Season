@@ -1,15 +1,23 @@
 class Draftee {
-    static all = [];
-    static byCollege(college) {
-        return Draftee.all.filter((x) => x.college === college);
+    static async getDraftees() {
+        const req = new Request("http://localhost:8000/draftees");
+        let draftees = await fetch(req);
+        draftees = await draftees.json();
+        return draftees;
     }
-    static byRound(round) {
-        return Draftee.all.filter((x) => x.round === round);
+    static async byCollege(college) {
+        let draftees = await Draftee.getDraftees();
+        return draftees.filter((x) => x.college === college);
     }
-    static displayDraftees() {
+    static async byRound(round) {
+        let draftees = await Draftee.getDraftees();
+        return draftees.filter((x) => x.round === round);
+    }
+    static async displayDraftees() {
         let blueOrRed = 1;
+        let draftees = await Draftee.getDraftees();
 
-        for (let draftee of Draftee.all) {
+        for (let draftee of draftees) {
             if (draftee.pick === 1) {
                 if (blueOrRed) {
                     draftBoard.innerHTML += `
@@ -111,15 +119,22 @@ class Player {
 }
 
 class Team {
-    static all = [];
-    static byConferance(conf) {
-        return Team.all.filter((x) => x.conferance === conf.toUpperCase());
+    static async getTeams() {
+        const req = new Request("http://localhost:8000/standings");
+        let teams = await fetch(req);
+        teams = await teams.json();
+        return teams;
     }
-    static byDivision(conf, div) {
-        return Team.all.filter((x) => x.conferance === conf.toUpperCase() && x.division.toLowerCase() === div.toLowerCase());
+    static async byConferance(conf) {
+        let teams = await Team.getTeams();
+        return teams.filter((x) => x.conferance === conf.toUpperCase());
     }
-    static displayDivision(conf, div) {
-        let teams = Team.byDivision(conf, div);
+    static async byDivision(conf, div) {
+        let teams = await Team.getTeams();
+        return teams.filter((x) => x.conferance === conf.toUpperCase() && x.division.toLowerCase() === div.toLowerCase());
+    }
+    static async displayDivision(conf, div) {
+        let teams = await Team.byDivision(conf, div);
         teams = teams.sort((a, b) => b.tiebreaker - a.tiebreaker);
         teams = teams.sort((a, b) => b.wins - a.wins);
         let container = document.createElement("div");
@@ -148,15 +163,18 @@ class Team {
             }
         }
     }
-    static teamByNickname(nickname) {
-        return Team.all.find((x) => x.nickname === nickname);
+    static async teamByNickname(nickname) {
+        let teams = await Team.getTeams();
+        return teams.find((x) => x.nickname === nickname);
     }
-    static teamIDByNickname(nickname) {
-        let team = Team.all.find((x) => x.nickname.toLowerCase() === nickname.toLowerCase());
+    static async teamIDByNickname(nickname) {
+        let teams = await Team.getTeams();
+        let team = teams.find((x) => x.nickname.toLowerCase() === nickname.toLowerCase());
         return team.id;
     }
-    static teamNameByID(id) {
-        let team = Team.all.find((x) => x.id === id);
+    static async teamNameByID(id) {
+        let teams = await Team.getTeams();
+        let team = teams.find((x) => x.id === id);
         return `${team.city} ${team.nickname}`;
     }
     constructor(teamData) {
@@ -192,14 +210,14 @@ class Team {
 
 const draftBoard = document.querySelector("#draft-board");
 
-for (let team of teams) {
-    new Team(team);
-}
+// for (let team of teams) {
+//     new Team(team);
+// }
 
 for (let player of players) {
     new Player(player);
 }
 
-for (let draftee of draftees) {
-    new Draftee(draftee);
-}
+// for (let draftee of draftees) {
+//     new Draftee(draftee);
+// }
