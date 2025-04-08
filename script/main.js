@@ -1,10 +1,4 @@
 class Draftee {
-    static async getDraftees() {
-        const req = new Request("http://localhost:8000/draftees");
-        let draftees = await fetch(req);
-        draftees = await draftees.json();
-        return draftees;
-    }
     static async byCollege(college) {
         let draftees = await Draftee.getDraftees();
         return draftees.filter((x) => x.college === college);
@@ -16,6 +10,10 @@ class Draftee {
     static async displayDraftees() {
         let blueOrRed = 1;
         let draftees = await Draftee.getDraftees();
+        draftees.sort((a, b) => a.pick - b.pick);
+        draftees.sort((a, b) => a.round - b.round);
+        const draftBoard = document.querySelector("#draft-board");
+        draftBoard.innerHTML = "";
 
         for (let draftee of draftees) {
             if (draftee.pick === 1) {
@@ -74,6 +72,12 @@ class Draftee {
             
         }
     }
+    static async getDraftees() {
+        const req = new Request("http://localhost:8000/draftees");
+        let draftees = await fetch(req);
+        draftees = await draftees.json();
+        return draftees;
+    }
     constructor(drafteeData) {
         this.round = drafteeData.round;
         this.pick = drafteeData.pick;
@@ -81,7 +85,6 @@ class Draftee {
         this.position = drafteeData.position;
         this.name = drafteeData.name;
         this.college = drafteeData.college;
-        this.constructor.all.push(this);
     }
 }
 
@@ -208,15 +211,13 @@ class Team {
     // }
 }
 
-const draftBoard = document.querySelector("#draft-board");
-
 // for (let team of teams) {
 //     new Team(team);
 // }
 
-for (let player of players) {
-    new Player(player);
-}
+// for (let player of players) {
+//     new Player(player);
+// }
 
 // for (let draftee of draftees) {
 //     new Draftee(draftee);
