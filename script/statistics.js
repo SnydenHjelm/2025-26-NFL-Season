@@ -1,8 +1,8 @@
 function displayStatistics(data) {
-    data = data.sort((a, b) => b.statCount - a.statCount);
     
 
     for (let item of data) {
+        item = item.sort((a, b) => b.statCount - a.statCount);
         let rank = 1;
         let statName = fullStatName(item[0].stat);
         let parent = document.querySelector(`#${item[0].stat}`);
