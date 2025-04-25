@@ -6,7 +6,7 @@
 
 .drafted-player {
     display: grid;
-    grid-template-columns: 120px 120px 50px 50px 2fr 180px;
+    grid-template-columns: 120px 120px 50px 60px 2fr 180px;
     border: 2px solid var(--red-border);
     border-radius: 5px;
     align-items: center;

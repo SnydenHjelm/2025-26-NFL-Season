@@ -1,7 +1,11 @@
 class Draftee {
     static async byCollege(college) {
         let draftees = await Draftee.getDraftees();
-        return draftees.filter((x) => x.college === college);
+        return draftees.filter((x) => x.college.toLowerCase() === college.toLowerCase());
+    }
+    static async byPosition(pos) {
+        let draftees = await Draftee.getDraftees();
+        return draftees.filter((x) => x.position === pos.toUpperCase());
     }
     static async byRound(round) {
         let draftees = await Draftee.getDraftees();
@@ -82,7 +86,7 @@ class Draftee {
         this.round = drafteeData.round;
         this.pick = drafteeData.pick;
         this.team = drafteeData.team;
-        this.position = drafteeData.position;
+        this.position = drafteeData.position.toUpperCase();
         this.name = drafteeData.name;
         this.college = drafteeData.college;
     }
