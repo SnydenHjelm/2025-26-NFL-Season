@@ -82,6 +82,40 @@ class Draftee {
         draftees = await draftees.json();
         return draftees;
     }
+    static async mostPopularCollege() {
+        let draftees = await Draftee.getDraftees();
+        let allColleges = draftees.map((x) =>  x.college);
+        let obj = {};
+
+        for (let i=0; i<allColleges.length; i++) {
+            let college = allColleges[i];
+            if (obj[college]) {
+                obj[college]++;
+            } else {
+                obj[college] = 1;
+            }
+        }
+        const sortedArr = Object.entries(obj).sort((a, b) => b[1] - a[1]);
+        // const sortedObj = Object.fromEntries(sortedArr);
+        return sortedArr;
+    }
+    static async mostPopularPosition() {
+        let draftees = await Draftee.getDraftees();
+        let allPositions = draftees.map((x) => x.position);
+        let obj = {};
+
+        for (let i=0; i<allPositions.length; i++) {
+            let position = allPositions[i];
+            if (obj[position]) {
+                obj[position]++;
+            } else {
+                obj[position] = 1;
+            }
+        }
+        const sortedArr = Object.entries(obj).sort((a, b) => b[1] - a[1]);
+        // const sortedObj = Object.fromEntries(sortedArr);
+        return sortedArr;
+    }
     constructor(drafteeData) {
         this.round = drafteeData.round;
         this.pick = drafteeData.pick;
