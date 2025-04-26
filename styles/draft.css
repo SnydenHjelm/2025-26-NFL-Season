@@ -21,12 +21,13 @@
     background-color: #032a53;
 }
 
-.drafted-player p {
-    margin: 15px;
-}
-
 .drafted-player img, .drafted-player p {
     justify-self: center;
+}
+
+.drafted-player p {
+    margin: 15px;
+    /* justify-self: start; */
 }
 
 #form {

@@ -30,20 +30,6 @@ async function handler(req) {
             return new Response("Invalid round. Round must be a number between 1-7", {headers: headersOBJ});
         }
 
-        // if (data.round === 3) {
-        //     let draftees = JSON.parse(Deno.readTextFileSync("../db/draft.json"));
-        //     let exist = draftees.find((x) => x.round === data.round && x.pick === data.pick);
-        //     if (exist) {headersOBJ.set("status", 400); return new Response("Error. Pick is already in database", {headers: headersOBJ})};
-
-        //     let teamExist = JSON.parse(Deno.readTextFileSync("../db/standings.json")).find((x) => x.nickname.toLowerCase() === data.team.toLowerCase());
-        //     if (!teamExist) {headersOBJ.set("status", 400); return new Response("Team does not exist", {headers: headersOBJ})};
-
-        //     let db = JSON.parse(Deno.readTextFileSync("../db/draft.json"));
-        //     db.push({round: data.round, pick: data.pick, team: data.team, position: data.position, name: data.name, college: data.college});
-        //     Deno.writeTextFileSync("../db/draft.json", JSON.stringify(db));
-        //     return new Response("Player added successfully", {headers: headersOBJ});
-        // }
-
         if (!data.pick || typeof data.pick !== "number" || data.pick > 32 || data.pick <= 0) {
             headersOBJ.set("status", 400);
             return new Response("Invalid pick. Pick must be a number between 1-32", {headers: headersOBJ});
