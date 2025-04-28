@@ -11,6 +11,10 @@ class Draftee {
         let draftees = await Draftee.getDraftees();
         return draftees.filter((x) => x.round === round);
     }
+    static async byTeam(team) {
+        let draftees = await Draftee.getDraftees();
+        return draftees.filter((x) => x.team.toLowerCase() === team.toLowerCase());
+    }
     static async displayDraftees() {
         let blueOrRed = 1;
         let draftees = await Draftee.getDraftees();
