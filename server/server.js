@@ -10,6 +10,9 @@ async function handler(req) {
     // console.log(req);
 
     const url = new URL(req.url);
+    const weekPath = new URLPattern({pathname: "/week/:number"});
+    const weekMatch = weekPath.exec(url);
+
     if (url.pathname === "/draftees" && req.method === "GET") {
         let draftees = Deno.readTextFileSync("../db/draft.json");
         headersOBJ.set("content-type", "application/json");
@@ -68,6 +71,46 @@ async function handler(req) {
         db.push({round: data.round, pick: data.pick, team: data.team, position: data.position, name: data.name, college: data.college});
         Deno.writeTextFileSync("../db/draft.json", JSON.stringify(db));
         return new Response("Player added successfully", {headers: headersOBJ});
+    }
+
+    if (req.method === "POST" && url.pathname === "/game") {
+        if (req.headers.get("content-type") !== "application/json") {headersOBJ.set("status", 400); return new Response("Wrong content-type, JSON expected"), {headers: headersOBJ}};
+        let reqBody = await req.json();
+
+        if (!reqBody.week || typeof reqBody.week !== "number") {
+            return new Response("One or more attributes missing or invalid, bad request", {status: 400, headers: headersOBJ});
+        }
+
+        if (!reqBody.teams || !Array.isArray(reqBody.teams) || reqBody.teams.length !== 2) {
+            return new Response("One or more attributes missing or invalid, bad request", {status: 400, headers: headersOBJ});
+        }
+
+        if (!reqBody.score || typeof reqBody.score !== "string") {
+            return new Response("One or more attributes missing or invalid, bad request", {status: 400, headers: headersOBJ});
+        }
+
+        if (!reqBody.primetime || typeof reqBody.primetime !== "string") {
+            return new Response("One or more attributes missing or invalid, bad request", {status: 400, headers: headersOBJ});
+        }
+        
+        let obj = {
+            week: reqBody.week,
+            teams: reqBody.teams,
+            score: reqBody.score,
+            primetime: reqBody.primetime
+        }
+        let allGames = JSON.parse(Deno.readTextFileSync("../db/games.json"));
+        allGames.push(obj);
+        Deno.writeTextFileSync("../db/games.json", JSON.stringify(allGames));
+        return new Response("Game added succesfully", {headers: headersOBJ});
+    }
+
+    if (req.method === "GET" && weekMatch) {
+        let weekNum = parseInt(weekMatch.pathname.groups.number);
+        let allWeekGames = JSON.parse(Deno.readTextFileSync("../db/games.json"));
+        let weekGames = allWeekGames.filter((x) => x.week === weekNum);
+        headersOBJ.set("content-type", "application/json");
+        return new Response(JSON.stringify(weekGames), {headers: headersOBJ});
     }
 
     return new Response(`{"error": "Bad Request"}`, {headers: headersOBJ});

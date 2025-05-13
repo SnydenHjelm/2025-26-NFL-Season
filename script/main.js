@@ -130,6 +130,21 @@ class Draftee {
     }
 }
 
+class Game {
+    static async getWeekGames(week) {
+        let req = new Request(`http://localhost:8000/week/${week}`);
+        let resp = await fetch(req);
+        let reso = await resp.json();
+        return reso;
+    }
+    constructor(data) {
+        this.week = data.week;
+        this.teams = data.teams;
+        this.score = data.score;
+        this.primetime = data.primetime;
+    }
+}
+
 class Player {
     static all = [];
     static byId(id) {

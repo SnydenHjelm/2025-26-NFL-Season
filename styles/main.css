@@ -23,7 +23,7 @@ body {
     border-radius: 10px;
     color: white;
     transform: scale(1.05);
-    border: 2px solid #01162c;
+    border: 2px solid #01162c !important;
 }
 
 footer {
@@ -150,6 +150,7 @@ nav > a:hover {
 #week-nav div a {
     text-decoration: none;
     color: white;
+    margin: 0px 10px;
     font-size: 20px;
     border: 2px solid var(--nfl-red);
 }
