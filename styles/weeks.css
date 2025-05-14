@@ -1,0 +1,60 @@
+.blue {
+    background-color: #032a53 !important;
+    border-color: var(--blue-border) !important;
+}
+
+.controls {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+#no-games {
+    font-family: bread;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+.score {
+    font-size: 35px;
+    font-family: head;
+}
+
+.status {
+    font-family: bread;
+    font-size: 20px;
+    color: white;
+}
+
+.week-game {
+    display: grid;
+    grid-template-columns: 100px 1fr 100px 1fr 100px 1fr;
+    align-items: center;
+    padding: 10px;
+    font-size: 20px;
+    font-family: bread;
+    background-color: var(--nfl-red);
+    border: 2px solid var(--red-border);
+    border-radius: 10px;
+    color: white;
+}
+
+.week-game img {
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+}
+
+.week-game p {
+    justify-self: center;
+}
+
+.week-games {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

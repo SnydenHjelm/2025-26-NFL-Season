@@ -251,10 +251,6 @@ class Team {
         this.secondaryC = teamData.secondaryC;
         this.constructor.all.push(this);
     }
-    get getWins() {return this.wins};
-    get getTies() {return this.ties};
-    get getLosses() {return this.losses};
-
     // changeWDL(what) {
     //     if (what.toLowerCase() === "w") {
     //         this.wins++

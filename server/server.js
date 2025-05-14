@@ -77,7 +77,7 @@ async function handler(req) {
         if (req.headers.get("content-type") !== "application/json") {headersOBJ.set("status", 400); return new Response("Wrong content-type, JSON expected"), {headers: headersOBJ}};
         let reqBody = await req.json();
 
-        if (!reqBody.week || typeof reqBody.week !== "number") {
+        if (!reqBody.week || typeof parseInt(reqBody.week) !== "number") {
             return new Response("One or more attributes missing or invalid, bad request", {status: 400, headers: headersOBJ});
         }
 
@@ -92,9 +92,18 @@ async function handler(req) {
         if (!reqBody.primetime || typeof reqBody.primetime !== "string") {
             return new Response("One or more attributes missing or invalid, bad request", {status: 400, headers: headersOBJ});
         }
+
+        let allTeams = JSON.parse(Deno.readTextFileSync("../db/standings.json"));
+        let team1 = allTeams.find((x) => x.nickname.toLowerCase() === reqBody.teams[0].toLowerCase());
+        let team2 = allTeams.find((x) => x.nickname.toLowerCase() === reqBody.teams[1].toLowerCase());
+
+        if (!team1 || !team2) {
+            return new Response("One or both teams don't exist, try again", {status: 400, headers: headersOBJ});
+        }
+
         
         let obj = {
-            week: reqBody.week,
+            week: parseInt(reqBody.week),
             teams: reqBody.teams,
             score: reqBody.score,
             primetime: reqBody.primetime

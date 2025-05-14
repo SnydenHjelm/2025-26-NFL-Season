@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2025 NFL Draft</title>
+    <title>Week 1 | 2025-26 NFL Season</title>
     <link rel="stylesheet" href="../styles/fonts.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <link rel="stylesheet" href="../styles/draft.css">
+    <link rel="stylesheet" href="../styles/weeks.css">
     <link rel="icon" href="../images/nfl-icon.webp">
 </head>
 <body>
@@ -48,6 +48,22 @@
             </div>
         </div>
         <h2>Week 1</h2>
+        <div id="week1" class="week-games">
+        </div>
+        <div class="controls">
+            <input id="week-nr" value="1" type="number">
+            <input id="team1" type="text" placeholder="Away Team...">
+            <input id="team2" type="text" placeholder="Home Team...">
+            <input id="score" type="text" placeholder="Score...">
+            <select id="primetime">
+                <option>None</option>
+                <option>MNF</option>
+                <option>SNF</option>
+                <option>TNF</option>
+            </select>
+            <button id="submit">Submit</button>
+            <p class="status">...</p>
+        </div>
     </main>
     <script src="../script/main.js"></script>
     <script src="../script/weeks.js"></script>
