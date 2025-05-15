@@ -121,8 +121,26 @@ async function handler(req) {
         headersOBJ.set("content-type", "application/json");
         return new Response(JSON.stringify(weekGames), {headers: headersOBJ});
     }
+    console.log(url.pathname)
+    if (req.method === "PATCH" && url.pathname === "/standings/patch") {
+        if (req.headers.get("content-type") !== "application/json") {headersOBJ.set("status", 400); return new Response("Wrong content-type, JSON expected"), {headers: headersOBJ}};
+        let reqBody = await req.json();
+        let allTeams = JSON.parse(Deno.readTextFileSync("../db/standings.json"));
+        for (let team of reqBody) {
+            let index = allTeams.findIndex((x) => x.nickname === team.team);
+            if (team.add === "Win") {
+                allTeams[index].wins++
+            } else if (team.add === "Loss") {
+                allTeams[index].losses++
+            } else if (team.add === "Tie") {
+                allTeams[index].ties++
+            }
+        }
+        Deno.writeTextFileSync("../db/standings.json", JSON.stringify(allTeams));
+        return new Response("Records successfully changed", {headers: headersOBJ}); 
+    }
 
-    return new Response(`{"error": "Bad Request"}`, {headers: headersOBJ});
+    return new Response(`Bad Request`, {status: 400, headers: headersOBJ});
 }
 
 Deno.serve(handler);

@@ -3,9 +3,12 @@
     border: 2px solid white;
 }
 
-.nfc {
-    background-color: var(--nfc-blue);
-    border: 2px solid white;
+#controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    gap: 5px;
 }
 
 .div-name {
@@ -30,13 +33,39 @@
     box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
 }
 
+.info {
+    color: white;
+    font-size: 20px;
+    margin: 0;
+    font-family: bread;
+}
+
 .last-team {
     border-bottom-style: none !important; 
+}
+
+.nfc {
+    background-color: var(--nfc-blue);
+    border: 2px solid white;
+}
+
+#patch-teams {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
 }
 
 .record {
     font-size: 24px;
     margin: 0;
+}
+
+#status {
+    color: white;
+    font-size: 20px;
+    margin: 0;
+    font-family: bread;
 }
 
 .team {

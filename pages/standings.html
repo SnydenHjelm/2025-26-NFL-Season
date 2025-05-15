@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2025-26 Divisional Standings</title>
+    <title>Divisional Standings | 2025-26 NFL Season</title>
     <link rel="stylesheet" href="../styles/fonts.css">
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/standings.css">
@@ -49,6 +49,24 @@
         </div>
         <h2>Divisional Standings</h2>
         <div id="division-tables"></div>
+        <div id="controls">
+            <select id="conf">
+                <option>AFC</option>
+                <option>NFC</option>
+            </select>
+            <select id="divi">
+                <option>North</option>
+                <option>East</option>
+                <option>South</option>
+                <option>West</option>
+            </select>
+            <button id="get-teams">Get Teams</button>
+            <p id="status">...</p>
+            <p class="info">Teams:</p>
+            <div id="patch-teams">
+
+            </div>
+        </div>
     </main>
     <footer>
         <img src="../images/nfl.png">
