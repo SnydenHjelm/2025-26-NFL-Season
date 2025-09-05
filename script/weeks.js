@@ -90,7 +90,7 @@ document.querySelector("#submit").addEventListener("click", async () => {
     let resp = await fetch(req);
     if (resp.ok) {
         let reso = await resp.text();
-        document.querySelector("#status").textContent = reso;
+        document.querySelector(".status").textContent = reso;
         await displayGames(parseInt(week.value));
         team1.value = "";
         team2.value = "";
@@ -98,7 +98,7 @@ document.querySelector("#submit").addEventListener("click", async () => {
         primetime.value = "None";
     } else {
         let reso = await resp.text();
-        document.querySelector("#status").textContent = reso;
+        document.querySelector(".status").textContent = reso;
     }
 });
 
