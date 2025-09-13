@@ -14,21 +14,21 @@ async function displayGames(week) {
     parent.innerHTML = "";
     let redOrBlue = true
     for (let game of reso) {
-        let team1 = await Team.teamByNickname(game.teams[0]);
-        let team2 = await Team.teamByNickname(game.teams[1]);
-        let team1Record = "";
-        let team2Record = "";
-        if (team1.ties !== 0) {
-            team1Record = `${team1.wins}-${team1.losses}-${team1.ties}`;
-        } else {
-            team1Record = `${team1.wins}-${team1.losses}`;
-        }
+        // let team1 = await Team.teamByNickname(game.teams[0]);
+        // let team2 = await Team.teamByNickname(game.teams[1]);
+        // let team1Record = "";
+        // let team2Record = "";
+        // if (team1.ties !== 0) {
+        //     team1Record = `${team1.wins}-${team1.losses}-${team1.ties}`;
+        // } else {
+        //     team1Record = `${team1.wins}-${team1.losses}`;
+        // }
 
-        if (team2.ties !== 0) {
-            team2Record = `${team2.wins}-${team2.losses}-${team2.ties}`;
-        } else {
-            team2Record = `${team2.wins}-${team2.losses}`;
-        }
+        // if (team2.ties !== 0) {
+        //     team2Record = `${team2.wins}-${team2.losses}-${team2.ties}`;
+        // } else {
+        //     team2Record = `${team2.wins}-${team2.losses}`;
+        // }
 
         let div = document.createElement("div");
         div.classList.add("week-game");
@@ -42,20 +42,20 @@ async function displayGames(week) {
         if (game.primetime !== "None") {
             div.innerHTML = `
             <img src="../images/${game.primetime}.png">
-            <p>${game.teams[0]}<br>${team1Record}</p>
+            <p>${game.teams[0]}</p>
             <img src="../images/${game.teams[0]}.png">
             <p class="score">${game.score}</p>
             <img src="../images/${game.teams[1]}.png">
-            <p>${game.teams[1]}<br>${team2Record}</p>
+            <p>${game.teams[1]}</p>
             `
         } else {
             div.innerHTML = `
             <img src="../images/nfl.png">
-            <p>${game.teams[0]}<br>${team1Record}</p>
+            <p>${game.teams[0]}</p>
             <img src="../images/${game.teams[0]}.png">
             <p class="score">${game.score}</p>
             <img src="../images/${game.teams[1]}.png">
-            <p>${game.teams[1]}<br>${team2Record}</p>
+            <p>${game.teams[1]}</p>
             `
         }
         parent.appendChild(div);
