@@ -121,7 +121,7 @@ async function handler(req) {
         headersOBJ.set("content-type", "application/json");
         return new Response(JSON.stringify(weekGames), {headers: headersOBJ});
     }
-    console.log(url.pathname)
+    
     if (req.method === "PATCH" && url.pathname === "/standings/patch") {
         if (req.headers.get("content-type") !== "application/json") {headersOBJ.set("status", 400); return new Response("Wrong content-type, JSON expected"), {headers: headersOBJ}};
         let reqBody = await req.json();
