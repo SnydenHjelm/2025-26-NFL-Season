@@ -134,6 +134,8 @@ async function handler(req) {
                 allTeams[index].losses++
             } else if (team.add === "Tie") {
                 allTeams[index].ties++
+            } else if (team.add === "Bye") {
+                continue;
             }
         }
         Deno.writeTextFileSync("../db/standings.json", JSON.stringify(allTeams));
