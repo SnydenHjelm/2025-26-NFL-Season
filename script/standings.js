@@ -27,6 +27,7 @@ async function getTeams() {
         <option>Win</option>
         <option>Loss</option>
         <option>Tie</option>
+        <option>Bye</option>
         </select>
         `;
         parent.appendChild(div);
