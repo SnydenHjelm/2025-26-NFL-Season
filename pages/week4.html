@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2025 NFL Draft</title>
+    <title>Week 4 | 2025-26 NFL Season</title>
     <link rel="stylesheet" href="../styles/fonts.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <link rel="stylesheet" href="../styles/draft.css">
+    <link rel="stylesheet" href="../styles/weeks.css">
     <link rel="icon" href="../images/nfl-icon.webp">
 </head>
 <body>
     <main>
         <nav>
             <a href="../index.html">Home</a>
-            <a id="current" href="draft.html">Draft</a>
+            <a href="draft.html">Draft</a>
             <a href="standings.html">Standings</a>
             <a href="statistics.html">Statistics</a>
         </nav>
@@ -22,7 +22,7 @@
                 <a href="week1.html">Week 1</a>
                 <a href="week2.html">Week 2</a>
                 <a href="week3.html">Week 3</a>
-                <a href="week4.html">Week 4</a>
+                <a id="current" href="week4.html">Week 4</a>
                 <a href="week5.html">Week 5</a>
                 <a href="week6.html">Week 6</a>
                 <a href="week7.html">Week 7</a>
@@ -47,42 +47,26 @@
                 <a href="super-bowl.html">Super Bowl</a>
             </div>
         </div>
-        <h2>2025 NFL Draft</h2>
-        
-        <div id="round-nav">
-            <a href="#round-1">Round 1</a>
-            <a href="#round-2">Round 2</a>
-            <a href="#round-3">Round 3</a>
-            <a href="#round-4">Round 4</a>
-            <a href="#round-5">Round 5</a>
-            <a href="#round-6">Round 6</a>
-            <a href="#round-7">Round 7</a>
+        <h2>Week 4</h2>
+        <div id="week4" class="week-games">
         </div>
-        <div id="draft-board">
-        </div>
-        <h2>DRAFT CONCLUDED</h2>
-        <div id="form">
-            <input id="round" type="number" placeholder="Round*">
-            <input id="pick" type="number" placeholder="Pick*">
-            <input id="team" type="text" placeholder="Team*">
-            <input id="position" type="text" placeholder="Position*">
-            <input id="name" type="text" placeholder="Name*">
-            <input id="college" type="text" placeholder="College*">
-            <button id="submit" type="button">Submit</button>
-            <p id="status-msg">Add a player</p>
+        <div class="controls">
+            <input id="week-nr" value="4" type="number">
+            <input id="team1" type="text" placeholder="Away Team...">
+            <input id="team2" type="text" placeholder="Home Team...">
+            <input id="score" type="text" placeholder="Score...">
+            <select id="primetime">
+                <option>None</option>
+                <option>MNF</option>
+                <option>SNF</option>
+                <option>TNF</option>
+                <option>Ireland</option>
+            </select>
+            <button id="submit">Submit</button>
+            <p class="status">...</p>
         </div>
     </main>
-    <footer>
-        <img src="../images/nfl.png">
-        <h2>2025-26 NFL Season</h2>
-        <div id="footer-info">
-            <a href="../index.html">Home</a>
-            <a href="draft.html">Draft</a>
-            <a href="standings.html">Standings</a>
-            <a href="statistics.html">Statistics</a>
-        </div>
-    </footer>
     <script src="../script/main.js"></script>
-    <script src="../script/draft.js"></script>
+    <script src="../script/weeks.js"></script>
 </body>
 </html>
