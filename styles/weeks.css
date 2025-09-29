@@ -3,6 +3,11 @@
     border-color: var(--blue-border) !important;
 }
 
+#bye {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .controls {
     margin-top: 15px;
     display: flex;
