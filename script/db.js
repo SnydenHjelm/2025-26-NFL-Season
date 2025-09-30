@@ -49,11 +49,11 @@ const teams = [
 const stats = [
     [
         {stat: "pass-yds"},
-        {team: "Bengals", position: "QB", name: "Joe Burrow", statCount: 4918},
-        {team: "Vikings", position: "QB", name: "Sam Darnold", statCount: 4319},
-        {team: "Seahawks", position: "QB", name: "Geno Smith", statCount: 4320},
-        {team: "Lions", position: "QB", name: "Jared Goff", statCount: 4629},
-        {team: "Buccaneers", position: "QB", name: "Baker Mayfield", statCount: 4500}
+        {team: "Cowboys", position: "QB", name: "Dak Prescott", statCount: 1119},
+        {team: "Rams", position: "QB", name: "Matthew Stafford", statCount: 1114},
+        {team: "Packers", position: "QB", name: "Jordan Love", statCount: 1000},
+        {team: "Colts", position: "QB", name: "Daniel Jones", statCount: 1078},
+        {team: "Chargers", position: "QB", name: "Justin Herbert", statCount: 1063}
     ],
     
     [

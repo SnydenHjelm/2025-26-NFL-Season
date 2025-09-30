@@ -196,6 +196,7 @@ class Team {
     static async displayDivision(conf, div) {
         let teams = await Team.byDivision(conf, div);
         teams = teams.sort((a, b) => b.tiebreaker - a.tiebreaker);
+        teams = teams.sort((a, b) => b.ties- a.ties);
         teams = teams.sort((a, b) => b.wins - a.wins);
         let container = document.createElement("div");
         container.classList.add(conf.toLowerCase());
@@ -204,22 +205,42 @@ class Team {
         document.querySelector("#division-tables").appendChild(container);
         
         for (let i=0; i<teams.length; i++) {
-            if (i === teams.length - 1) {
-                container.innerHTML += `
-                <div class="team last-team">
-                    <img src="../images/${teams[i].nickname.toLowerCase()}.png">
-                    <p class="team-name">${teams[i].city} ${teams[i].nickname}</p>
-                    <p class="record">${teams[i].wins}-${teams[i].losses}</p>
-                </div>
-                `;
+            if (teams[i].ties > 0) {
+                if (i === teams.length - 1) {
+                    container.innerHTML += `
+                    <div class="team last-team">
+                        <img src="../images/${teams[i].nickname.toLowerCase()}.png">
+                        <p class="team-name">${teams[i].city} ${teams[i].nickname}</p>
+                        <p class="record">${teams[i].wins}-${teams[i].losses}-${teams[i].ties}</p>
+                    </div>
+                    `;
+                } else {
+                    container.innerHTML += `
+                    <div class="team">
+                        <img src="../images/${teams[i].nickname.toLowerCase()}.png">
+                        <p class="team-name">${teams[i].city} ${teams[i].nickname}</p>
+                        <p class="record">${teams[i].wins}-${teams[i].losses}-${teams[i].ties}</p>
+                    </div>
+                    `;
+                }
             } else {
-                container.innerHTML += `
-                <div class="team">
-                    <img src="../images/${teams[i].nickname.toLowerCase()}.png">
-                    <p class="team-name">${teams[i].city} ${teams[i].nickname}</p>
-                    <p class="record">${teams[i].wins}-${teams[i].losses}</p>
-                </div>
-                `;
+                if (i === teams.length - 1) {
+                    container.innerHTML += `
+                    <div class="team last-team">
+                        <img src="../images/${teams[i].nickname.toLowerCase()}.png">
+                        <p class="team-name">${teams[i].city} ${teams[i].nickname}</p>
+                        <p class="record">${teams[i].wins}-${teams[i].losses}</p>
+                    </div>
+                    `;
+                } else {
+                    container.innerHTML += `
+                    <div class="team">
+                        <img src="../images/${teams[i].nickname.toLowerCase()}.png">
+                        <p class="team-name">${teams[i].city} ${teams[i].nickname}</p>
+                        <p class="record">${teams[i].wins}-${teams[i].losses}</p>
+                    </div>
+                    `;
+                }
             }
         }
     }
