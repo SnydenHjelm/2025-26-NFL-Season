@@ -59,6 +59,7 @@
 .record {
     font-size: 24px;
     margin: 0;
+    margin-right: 10px;
 }
 
 #status {
