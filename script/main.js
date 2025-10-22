@@ -198,6 +198,7 @@ class Team {
         teams = teams.sort((a, b) => b.tiebreaker - a.tiebreaker);
         teams = teams.sort((a, b) => b.ties- a.ties);
         teams = teams.sort((a, b) => b.wins - a.wins);
+        teams = teams.sort((a, b) => a.losses - b.losses);
         let container = document.createElement("div");
         container.classList.add(conf.toLowerCase());
         container.id = `${conf.toLowerCase()}-${div.toLowerCase()}`;
