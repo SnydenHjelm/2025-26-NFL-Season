@@ -49,109 +49,109 @@ const teams = [
 const stats = [
     [
         {stat: "pass-yds"},
-        {team: "Cowboys", position: "QB", name: "Dak Prescott", statCount: 1119},
-        {team: "Rams", position: "QB", name: "Matthew Stafford", statCount: 1114},
-        {team: "Packers", position: "QB", name: "Jordan Love", statCount: 1000},
-        {team: "Colts", position: "QB", name: "Daniel Jones", statCount: 1078},
-        {team: "Chargers", position: "QB", name: "Justin Herbert", statCount: 1063}
+        {team: "Cowboys", position: "QB", name: "Dak Prescott", statCount: 2069},
+        {team: "Chargers", position: "QB", name: "Justin Herbert", statCount: 2140},
+        {team: "Chiefs", position: "QB", name: "Patrick Mahomes", statCount: 2099},
+        {team: "Colts", position: "QB", name: "Daniel Jones", statCount: 2062},
+        {team: "patriots", position: "QB", name: "Drake Maye", statCount: 2026}
     ],
     
     [
         {stat: "pass-tds"},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0}
+        {team: "Chiefs", position: "QB", name: "Patrick Mahomes", statCount: 17},
+        {team: "rams", position: "QB", name: "Matthew Stafford", statCount: 17},
+        {team: "chargers", position: "QB", name: "Justin Herbert", statCount: 16},
+        {team: "cowboys", position: "QB", name: "Dak Prescott", statCount: 16},
+        {team: "steelers", position: "QB", name: "Aaron Rodgers", statCount: 16}
     ],
 
     [
         {stat: "pass-int"},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0}
+        {team: "raiders", position: "QB", name: "Geno Smith", statCount: 10},
+        {team: "dolphins", position: "QB", name: "Tua Tagovailoa", statCount: 10},
+        {team: "bengals", position: "QB", name: "Jake Browning", statCount: 8},
+        {team: "chargers", position: "QB", name: "Justin Herbert", statCount: 7},
+        {team: "bengals", position: "QB", name: "Joe Flacco", statCount: 6}
     ],
 
     [
         {stat: "rush-yds"},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0}
+        {team: "colts", position: "RB", name: "Jonathan Taylor", statCount: 850},
+        {team: "bills", position: "RB", name: "James Cook", statCount: 753},
+        {team: "broncos", position: "RB", name: "J.K. Dobbins", statCount: 634},
+        {team: "cowboys", position: "RB", name: "Javonte Williams", statCount: 633},
+        {team: "panthers", position: "RB", name: "Rico Dowdle", statCount: 605}
     ],
 
     [
         {stat: "rush-tds"},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0}
+        {team: "colts", position: "RB", name: "Jonathan Taylor", statCount: 12},
+        {team: "packers", position: "RB", name: "Josh Jacobs", statCount: 9},
+        {team: "cowboys", position: "RB", name: "Javonte Williams", statCount: 8},
+        {team: "bills", position: "RB", name: "James Cook", statCount: 7},
+        {team: "lions", position: "RB", name: "Jahmyr Gibbs", statCount: 6}
     ],
 
     [
         {stat: "rec-yds"},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0}
+        {team: "seahawks", position: "WR", name: "Jaxson Smith-Njigba", statCount: 819},
+        {team: "bengals", position: "WR", name: "Ja'Marr Chase", statCount: 720},
+        {team: "cowboys", position: "WR", name: "George Pickens", statCount: 685},
+        {team: "rams", position: "WR", name: "Puka Nacua", statCount: 616},
+        {team: "vikings", position: "WR", name: "Justin Jefferson", statCount: 602}
     ],
 
     [
         {stat: "rec-tds"},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0}
+        {team: "eagles", position: "TE", name: "Dallas Goedert", statCount: 7},
+        {team: "lions", position: "WR", name: "Amon-Ra St. Brown", statCount: 7},
+        {team: "rams", position: "WR", name: "Davante Adams", statCount: 6},
+        {team: "cowboys", position: "TE", name: "Jake Ferguson", statCount: 6},
+        {team: "packers", position: "TE", name: "Tucker Kraft", statCount: 6}
     ],
 
     [
         {stat: "tfl"},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0}
+        {team: "browns", position: "DE", name: "Myles Garrett", statCount: 15},
+        {team: "giants", position: "LB", name: "Brian Burns", statCount: 13},
+        {team: "raiders", position: "DE", name: "Maxx Crosby", statCount: 10},
+        {team: "vikings", position: "LB", name: "Jonathan Greenard", statCount: 9},
+        {team: "chargers", position: "LB", name: "Tuli Tuipulotu", statCount: 9}
     ],
 
     [
         {stat: "sacks"},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0}
+        {team: "giants", position: "LB", name: "Brian Burns", statCount: 10},
+        {team: "browns", position: "DE", name: "Myles Garrett", statCount: 10},
+        {team: "rams", position: "LB", name: "Byron Young", statCount: 9},
+        {team: "broncos", position: "LB", name: "Nik Bonitto", statCount: 8},
+        {team: "packers", position: "DE", name: "Rashan Gary", statCount: 7.5}
     ],
 
     [
         {stat: "int"},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0}
+        {team: "bears", position: "S", name: "Kevin Byard", statCount: 4},
+        {team: "Jaguars", position: "LB", name: "Devin Lloyd", statCount: 4},
+        {team: "buccaneers", position: "CB", name: "Jamel Dean", statCount: 3},
+        {team: "bears", position: "LB", name: "Tremaine Edmunds", statCount: 3},
+        {team: "panthers", position: "CB", name: "Jaycee Horn", statCount: 3}
     ],
 
     [
         {stat: "ff"},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0}
+        {team: "bills", position: "DE", name: "Joey Bosa", statCount: 4},
+        {team: "lions", position: "DE", name: "Aidan Hutchinson", statCount: 4},
+        {team: "rams", position: "LB", name: "Jared Verse", statCount: 3},
+        {team: "jets", position: "DT", name: "Quinnen Williams", statCount: 3},
+        {team: "saints", position: "LB", name: "Demario Davis", statCount: 2}
     ],
 
     [
         {stat: "fr"},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0},
-        {team: "qm", position: "?", name: "Unknown", statCount: 0}
+        {team: "bills", position: "LB", name: "Terrel Bernard", statCount: 2},
+        {team: "49ers", position: "DT", name: "Alfred Collins", statCount: 2},
+        {team: "rams", position: "LB", name: "Nate Landman", statCount: 2},
+        {team: "colts", position: "DT", name: "Adetominwa Adebawore", statCount: 1},
+        {team: "texans", position: "DE", name: "Will Anderson Jr.", statCount: 1}
     ],
 ];
