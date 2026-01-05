@@ -49,109 +49,109 @@ const teams = [
 const stats = [
     [
         {stat: "pass-yds"},
-        {team: "Cowboys", position: "QB", name: "Dak Prescott", statCount: 2069},
-        {team: "Chargers", position: "QB", name: "Justin Herbert", statCount: 2140},
-        {team: "Chiefs", position: "QB", name: "Patrick Mahomes", statCount: 2099},
-        {team: "Colts", position: "QB", name: "Daniel Jones", statCount: 2062},
-        {team: "patriots", position: "QB", name: "Drake Maye", statCount: 2026}
+        {team: "Cowboys", position: "QB", name: "Dak Prescott", statCount: 4552},
+        {team: "lions", position: "QB", name: "Jared Goff", statCount: 4564},
+        {team: "rams", position: "QB", name: "Matthew Stafford", statCount: 4707},
+        {team: "seahawks", position: "QB", name: "Sam Darnold", statCount: 4048},
+        {team: "patriots", position: "QB", name: "Drake Maye", statCount: 4394}
     ],
     
     [
         {stat: "pass-tds"},
-        {team: "Chiefs", position: "QB", name: "Patrick Mahomes", statCount: 17},
-        {team: "rams", position: "QB", name: "Matthew Stafford", statCount: 17},
-        {team: "chargers", position: "QB", name: "Justin Herbert", statCount: 16},
-        {team: "cowboys", position: "QB", name: "Dak Prescott", statCount: 16},
-        {team: "steelers", position: "QB", name: "Aaron Rodgers", statCount: 16}
+        {team: "Lions", position: "QB", name: "Jared Goff", statCount: 34},
+        {team: "rams", position: "QB", name: "Matthew Stafford", statCount: 46},
+        {team: "patriots", position: "QB", name: "Drake Maye", statCount: 31},
+        {team: "cowboys", position: "QB", name: "Dak Prescott", statCount: 30},
+        {team: "jaguars", position: "QB", name: "Trevor Lawrence", statCount: 29}
     ],
 
     [
         {stat: "pass-int"},
-        {team: "raiders", position: "QB", name: "Geno Smith", statCount: 10},
-        {team: "dolphins", position: "QB", name: "Tua Tagovailoa", statCount: 10},
-        {team: "bengals", position: "QB", name: "Jake Browning", statCount: 8},
-        {team: "chargers", position: "QB", name: "Justin Herbert", statCount: 7},
-        {team: "bengals", position: "QB", name: "Joe Flacco", statCount: 6}
+        {team: "raiders", position: "QB", name: "Geno Smith", statCount: 17},
+        {team: "dolphins", position: "QB", name: "Tua Tagovailoa", statCount: 15},
+        {team: "seahawks", position: "QB", name: "Sam Darnold", statCount: 14},
+        {team: "chargers", position: "QB", name: "Justin Herbert", statCount: 13},
+        {team: "jaguars", position: "QB", name: "Trevor Lawrence", statCount: 12}
     ],
 
     [
         {stat: "rush-yds"},
-        {team: "colts", position: "RB", name: "Jonathan Taylor", statCount: 850},
-        {team: "bills", position: "RB", name: "James Cook", statCount: 753},
-        {team: "broncos", position: "RB", name: "J.K. Dobbins", statCount: 634},
-        {team: "cowboys", position: "RB", name: "Javonte Williams", statCount: 633},
-        {team: "panthers", position: "RB", name: "Rico Dowdle", statCount: 605}
+        {team: "colts", position: "RB", name: "Jonathan Taylor", statCount: 1585},
+        {team: "bills", position: "RB", name: "James Cook", statCount: 1621},
+        {team: "falcons", position: "RB", name: "Bijan Robinson", statCount: 1478},
+        {team: "ravens", position: "RB", name: "Derrick Henry", statCount: 1595},
+        {team: "dolphins", position: "RB", name: "De'Von Achane", statCount: 1350}
     ],
 
     [
         {stat: "rush-tds"},
-        {team: "colts", position: "RB", name: "Jonathan Taylor", statCount: 12},
-        {team: "packers", position: "RB", name: "Josh Jacobs", statCount: 9},
-        {team: "cowboys", position: "RB", name: "Javonte Williams", statCount: 8},
-        {team: "bills", position: "RB", name: "James Cook", statCount: 7},
-        {team: "lions", position: "RB", name: "Jahmyr Gibbs", statCount: 6}
+        {team: "colts", position: "RB", name: "Jonathan Taylor", statCount: 18},
+        {team: "packers", position: "RB", name: "Josh Jacobs", statCount: 13},
+        {team: "ravens", position: "RB", name: "Derrick Henry", statCount: 16},
+        {team: "bills", position: "QB", name: "Josh Allen", statCount: 14},
+        {team: "lions", position: "RB", name: "Jahmyr Gibbs", statCount: 13}
     ],
 
     [
         {stat: "rec-yds"},
-        {team: "seahawks", position: "WR", name: "Jaxson Smith-Njigba", statCount: 819},
-        {team: "bengals", position: "WR", name: "Ja'Marr Chase", statCount: 720},
-        {team: "cowboys", position: "WR", name: "George Pickens", statCount: 685},
-        {team: "rams", position: "WR", name: "Puka Nacua", statCount: 616},
-        {team: "vikings", position: "WR", name: "Justin Jefferson", statCount: 602}
+        {team: "seahawks", position: "WR", name: "Jaxson Smith-Njigba", statCount: 1793},
+        {team: "bengals", position: "WR", name: "Ja'Marr Chase", statCount: 1412},
+        {team: "cowboys", position: "WR", name: "George Pickens", statCount: 1429},
+        {team: "rams", position: "WR", name: "Puka Nacua", statCount: 1715},
+        {team: "lions", position: "WR", name: "Amon-Ra St. Brown", statCount: 1401}
     ],
 
     [
         {stat: "rec-tds"},
-        {team: "eagles", position: "TE", name: "Dallas Goedert", statCount: 7},
-        {team: "lions", position: "WR", name: "Amon-Ra St. Brown", statCount: 7},
-        {team: "rams", position: "WR", name: "Davante Adams", statCount: 6},
-        {team: "cowboys", position: "TE", name: "Jake Ferguson", statCount: 6},
-        {team: "packers", position: "TE", name: "Tucker Kraft", statCount: 6}
+        {team: "eagles", position: "TE", name: "Dallas Goedert", statCount: 11},
+        {team: "lions", position: "WR", name: "Amon-Ra St. Brown", statCount: 11},
+        {team: "rams", position: "WR", name: "Davante Adams", statCount: 14},
+        {team: "bengals", position: "WR", name: "Tee Higgins", statCount: 11},
+        {team: "cardinals", position: "TE", name: "Trey McBride", statCount: 11}
     ],
 
     [
         {stat: "tfl"},
-        {team: "browns", position: "DE", name: "Myles Garrett", statCount: 15},
-        {team: "giants", position: "LB", name: "Brian Burns", statCount: 13},
-        {team: "raiders", position: "DE", name: "Maxx Crosby", statCount: 10},
-        {team: "vikings", position: "LB", name: "Jonathan Greenard", statCount: 9},
-        {team: "chargers", position: "LB", name: "Tuli Tuipulotu", statCount: 9}
+        {team: "browns", position: "DE", name: "Myles Garrett", statCount: 33},
+        {team: "giants", position: "LB", name: "Brian Burns", statCount: 22},
+        {team: "raiders", position: "DE", name: "Maxx Crosby", statCount: 28},
+        {team: "texans", position: "DE", name: "Will Anderson Jr.", statCount: 20},
+        {team: "chargers", position: "LB", name: "Tuli Tuipulotu", statCount: 20}
     ],
 
     [
         {stat: "sacks"},
-        {team: "giants", position: "LB", name: "Brian Burns", statCount: 10},
-        {team: "browns", position: "DE", name: "Myles Garrett", statCount: 10},
-        {team: "rams", position: "LB", name: "Byron Young", statCount: 9},
-        {team: "broncos", position: "LB", name: "Nik Bonitto", statCount: 8},
-        {team: "packers", position: "DE", name: "Rashan Gary", statCount: 7.5}
+        {team: "giants", position: "LB", name: "Brian Burns", statCount: 16.5},
+        {team: "browns", position: "DE", name: "Myles Garrett", statCount: 23},
+        {team: "texans", position: "DE", name: "Danielle Hunter", statCount: 15},
+        {team: "broncos", position: "LB", name: "Nik Bonitto", statCount: 14},
+        {team: "lions", position: "DE", name: "Aidan Hutchinson", statCount: 14.5}
     ],
 
     [
         {stat: "int"},
-        {team: "bears", position: "S", name: "Kevin Byard", statCount: 4},
-        {team: "Jaguars", position: "LB", name: "Devin Lloyd", statCount: 4},
-        {team: "buccaneers", position: "CB", name: "Jamel Dean", statCount: 3},
-        {team: "bears", position: "LB", name: "Tremaine Edmunds", statCount: 3},
-        {team: "panthers", position: "CB", name: "Jaycee Horn", statCount: 3}
+        {team: "bears", position: "S", name: "Kevin Byard", statCount: 7},
+        {team: "falcons", position: "S", name: "Xavier Watts", statCount: 5},
+        {team: "seahawks", position: "LB", name: "Ernest Jones", statCount: 5},
+        {team: "jaguars", position: "S", name: "Antonio Johnson", statCount: 5},
+        {team: "panthers", position: "CB", name: "Jaycee Horn", statCount: 5}
     ],
 
     [
         {stat: "ff"},
-        {team: "bills", position: "DE", name: "Joey Bosa", statCount: 4},
+        {team: "bills", position: "DE", name: "Joey Bosa", statCount: 5},
         {team: "lions", position: "DE", name: "Aidan Hutchinson", statCount: 4},
-        {team: "rams", position: "LB", name: "Jared Verse", statCount: 3},
-        {team: "jets", position: "DT", name: "Quinnen Williams", statCount: 3},
-        {team: "saints", position: "LB", name: "Demario Davis", statCount: 2}
+        {team: "rams", position: "LB", name: "Nate Landman", statCount: 4},
+        {team: "chargers", position: "LB", name: "Khalil Mack", statCount: 4},
+        {team: "cardinals", position: "LB", name: "Josh Sweat", statCount: 4}
     ],
 
     [
         {stat: "fr"},
-        {team: "bills", position: "LB", name: "Terrel Bernard", statCount: 2},
-        {team: "49ers", position: "DT", name: "Alfred Collins", statCount: 2},
-        {team: "rams", position: "LB", name: "Nate Landman", statCount: 2},
-        {team: "colts", position: "DT", name: "Adetominwa Adebawore", statCount: 1},
-        {team: "texans", position: "DE", name: "Will Anderson Jr.", statCount: 1}
+        {team: "buccaneers", position: "LB", name: "Levonte David", statCount: 2},
+        {team: "cowboys", position: "LB", name: "Jadeveon Clowney", statCount: 2},
+        {team: "saints", position: "LB", name: "Pete Werner", statCount: 3},
+        {team: "seahawks", position: "LB", name: "DeMarcus Lawrence", statCount: 3},
+        {team: "texans", position: "DE", name: "Will Anderson Jr.", statCount: 2}
     ],
 ];
