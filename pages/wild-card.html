@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wild Card | 2025-26 NFL Season</title>
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/weeks.css">
+    <link rel="icon" href="../images/nfl-icon.webp">
+</head>
+<body>
+    <main>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="draft.html">Draft</a>
+            <a href="standings.html">Standings</a>
+            <a href="statistics.html">Statistics</a>
+        </nav>
+        <div id="week-nav">
+            <div class="reg-weeks" id="reg-weeks-top">
+                <a href="week1.html">Week 1</a>
+                <a href="week2.html">Week 2</a>
+                <a href="week3.html">Week 3</a>
+                <a href="week4.html">Week 4</a>
+                <a href="week5.html">Week 5</a>
+                <a href="week6.html">Week 6</a>
+                <a href="week7.html">Week 7</a>
+                <a href="week8.html">Week 8</a>
+                <a href="week9.html">Week 9</a>
+            </div>
+            <div class="reg-weeks">
+                <a href="week10.html">Week 10</a>
+                <a href="week11.html">Week 11</a>
+                <a href="week12.html">Week 12</a>
+                <a href="week13.html">Week 13</a>
+                <a href="week14.html">Week 14</a>
+                <a href="week15.html">Week 15</a>
+                <a href="week16.html">Week 16</a>
+                <a href="week17.html">Week 17</a>
+                <a href="week18.html">Week 18</a>
+            </div>
+            <div id="playoff-weeks">
+                <a id="current" href="wild-card.html">Wild Card</a>
+                <a href="divisional.html">Divisional</a>
+                <a href="champtionship.html">Championship</a>
+                <a href="super-bowl.html">Super Bowl</a>
+            </div>
+        </div>
+        <h2>Wild Card</h2>
+        <div id="week19" class="week-games">
+        </div>
+        <div class="controls">
+            <input id="week-nr" value="19" type="number">
+            <input id="team1" type="text" placeholder="Away Team...">
+            <input id="team2" type="text" placeholder="Home Team...">
+            <input id="score" type="text" placeholder="Score...">
+            <select id="primetime">
+                <option>Wild Card</option>
+                <option>Divisional</option>
+                <option>AFC Championship</option>
+                <option>NFC Championship</option>
+                <option>Super Bowl</option>
+            </select>
+            <button id="submit">Submit</button>
+            <p class="status">...</p>
+        </div>
+    </main>
+    <script src="../script/main.js"></script>
+    <script src="../script/weeks.js"></script>
+</body>
+</html>
