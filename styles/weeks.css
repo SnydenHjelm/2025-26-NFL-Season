@@ -17,6 +17,7 @@
     flex-direction: column;
     gap: 5px;
     align-items: center;
+    display: none;
 }
 
 #no-games {
